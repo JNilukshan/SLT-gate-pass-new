@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import slt from "../assets/SLTMobitel_logo.svg";
+import slt from "../assets/SLTMobitel_Logo.svg";
 import sltHome from "../assets/sltHome.webp";
 import PopupLogout from "./PopupLogout";
 
