@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Bell, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "/src/assets/SLTMobitel_logo.svg";
+import logo from "/src/assets/SLTMobitel_Logo.svg";
 import PopupLogout from "../pages/PopupLogout";
 
 const Navbar = ({ logout, role }) => {
