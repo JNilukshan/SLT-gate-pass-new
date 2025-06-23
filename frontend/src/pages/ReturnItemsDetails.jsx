@@ -55,7 +55,7 @@ const ReturnItemsDetails = () => {
       };
 
       // Replace with your actual API endpoint
-      const response = await axios.post('/api/return-items', payload);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/return-items`, payload);
 
       if (response.status === 201) {
         setSuccessMessage('Return items processed successfully!');
