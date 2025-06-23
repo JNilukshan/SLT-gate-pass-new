@@ -13,7 +13,7 @@ const ViewReceiver = () => {
   useEffect(() => {
     const fetchRequest = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/requests/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/requests/${id}`);
         setRequest(response.data);
       } catch (err) {
         console.error("Failed to fetch request:", err);
