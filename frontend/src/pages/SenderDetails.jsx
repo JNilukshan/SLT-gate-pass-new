@@ -15,7 +15,7 @@ const SenderDetails = ({ onSenderDetailsChange }) => {
     const fetchSenderDetails = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5000/api/auth/user", {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/user`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFormData(response.data);
