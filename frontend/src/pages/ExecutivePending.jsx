@@ -14,7 +14,7 @@ const ViewExecutivePending = () => {
   useEffect(() => {
     const fetchRequest = async () => {
       try {
-        const token = localStorage.getItem('token'); const response = await axios.get(`http://localhost:5000/api/executive/${id}`, {
+        const token = localStorage.getItem('token'); const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/executive/${id}`, {
           headers: {
             Authorization: `Bearer ${token}` 
           }
