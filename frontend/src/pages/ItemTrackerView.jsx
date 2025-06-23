@@ -20,7 +20,7 @@ const ItemTrackerView = () => {
   const fetchRequestDetails = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:5000/api/requests/${id}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/requests/${id}`);
       setRequest(response.data);
       setError(null);
     } catch (error) {
