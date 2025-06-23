@@ -32,7 +32,7 @@ const Dispatch = () => {
   
         console.log("User's Branch Location:", `"${userBranch}"`);
   
-        const response = await axios.get("http://localhost:5000/api/dispatch/verified", {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/dispatch/verified`, {
           headers: { Authorization: `Bearer ${token}` },
         });
   
