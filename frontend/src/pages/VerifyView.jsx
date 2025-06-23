@@ -14,7 +14,7 @@ const VerifyView = () => {
   useEffect(() => {
     const fetchRequest = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/verify/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/verify/${id}`);
         setRequest(response.data);
       } catch (error) {
         console.error("Error fetching request details:", error);
