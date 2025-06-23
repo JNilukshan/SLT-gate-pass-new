@@ -8,7 +8,7 @@ const ItemListModal = ({ id, onClose }) => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/requests/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/requests/${id}`);
         const itemList = response.data.items || [];
         setItems(itemList);
       } catch (error) {
