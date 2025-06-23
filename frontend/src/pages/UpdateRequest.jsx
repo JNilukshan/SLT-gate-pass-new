@@ -17,7 +17,7 @@ const UpdateRequest = () => {
 
   const fetchRequestData = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/requests/${id}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/requests/${id}`);
       setItems(response.data.items.map(item => ({
         itemName: item.itemName || "",
         serialNo: item.serialNo || "",
