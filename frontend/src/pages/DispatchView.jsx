@@ -26,7 +26,7 @@ const DispatchView = () => {
   const fetchRequestDetails = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/dispatch/getDispatchById/${id}`
+        `${import.meta.env.VITE_API_URL}/api/dispatch/getDispatchById/${id}`
       );
       const requestData = response.data;
       setRequest(requestData);
