@@ -11,7 +11,7 @@ const AdminView = () => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/auth/user', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/user`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUser(response.data);
