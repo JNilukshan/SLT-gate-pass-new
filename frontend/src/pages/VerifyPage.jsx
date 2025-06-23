@@ -17,7 +17,7 @@ const Verify = () => {
 
   const fetchRequests = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/verify'); 
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/verify`); 
       setRequests(response.data);
     } catch (error) {
       console.error("Error fetching requests:", error.response ? error.response.data : error.message);
