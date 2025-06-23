@@ -13,7 +13,7 @@ const Receiver = () => {
     const fetchRequests = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/receiver', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/receiver`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
